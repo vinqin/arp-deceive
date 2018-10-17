@@ -15,5 +15,5 @@ $ sudo apt-get update
 $ sudo apt-get install libnet-dev -y
 $ cmake .
 $ make
-$ ./sudo arp_deceive
+$ sudo ./arp_deceive
 ```
