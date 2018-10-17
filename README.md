@@ -13,8 +13,7 @@ Deceive gateway of lan using gratuitous arp reply.
 ```bash
 $ sudo apt-get update
 $ sudo apt-get install libnet-dev -y
-$ cmake
+$ cmake .
 $ make
 $ ./sudo arp_deceive
 ```
-
