@@ -66,12 +66,14 @@ void init(const char *profile, const char *appName) {
         targetIP[i] = (unsigned char) (atoi(ip[i]) & 0xff);
         free(ip[i]);
     }
+    free(ip);
 
     char **mac = str_split(MAC, ':');
     for (int i = 0; mac[i] != NULL; ++i) {
         targetMAC[i] = (unsigned char) ((int) strtol(mac[i], NULL, 16) & 0xff);
         free(mac[i]);
     }
+    free(mac);
 
     speed = atoi(_speed) < 0 ? 0 : atoi(_speed);
     times = atoi(_times) < 0 ? 10 : atoi(_times);
