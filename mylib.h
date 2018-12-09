@@ -21,7 +21,7 @@ extern char *dev; // 网络接口名称（即网卡名）
 extern unsigned char targetIP[4]; // 目标IP地址
 extern unsigned char targetMAC[6]; // 目标MAC地址
 extern unsigned char broadcastMAC[6]; // 以太网MAC广播地址
-extern int speed; // 数据包发送速度
+extern int speed; // 数据包发送速度，以秒为单位
 extern int times; // 一次发送多少个数据包
 
 char *l_trim(char *, const char *); /* 删除左边的空格 */

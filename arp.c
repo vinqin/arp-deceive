@@ -4,7 +4,7 @@ char *dev; // 网络接口名称（即网卡名）
 unsigned char targetIP[4]; // 目标IP地址
 unsigned char targetMAC[6]; // 目标MAC地址
 unsigned char broadcastMAC[6] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff}; // 以太网MAC广播地址
-int speed; // 数据包发送速度
+int speed; // 数据包发送速度，以秒为单位
 int times; // 一次发送多少个数据包
 
 /* 将a_str按照a_delim分割成子串 */
@@ -51,7 +51,7 @@ char **str_split(char *a_str, const char a_delim) {
     return result;
 }
 
-/* 初始化参数，其中profile为配置文件的路径 */
+/* 初始化参数，其中profile为配置文件的路径，appName为配置文件中的节点名称 */
 void init(const char *profile, const char *appName) {
     dev = (char *) malloc(KEYVALLEN * sizeof(char));
     char IP[KEYVALLEN], MAC[KEYVALLEN], _speed[10], _times[10];

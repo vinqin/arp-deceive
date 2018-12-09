@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     }
     init(profile, "arp_deceive");
 
-    printf("Repaly gratuitous arp package to the LAN...\nEnter Ctrl-c to abort.\n");
+    printf("Replay gratuitous arp package to the LAN...\nEnter Ctrl-c to abort.\n");
     int flag = 0;
 
     while (!flag) {
